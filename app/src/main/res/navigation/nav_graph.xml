@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.deliverynationclone.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/deliveryHomeFragment"
+        android:name="com.example.deliverynationclone.fragment.DeliveryHomeFragment"
+        android:label="DeliveryHomeFragment" >
+        <action
+            android:id="@+id/action_deliveryHomeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_deliveryHomeFragment_to_dibsOnFragment"
+            app:destination="@id/dibsOnFragment" />
+        <action
+            android:id="@+id/action_deliveryHomeFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_deliveryHomeFragment_to_myDeliveryNationFragment"
+            app:destination="@id/myDeliveryNationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.deliverynationclone.fragment.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/myDeliveryNationFragment"
+        android:name="com.example.deliverynationclone.fragment.MyDeliveryNationFragment"
+        android:label="MyDeliveryNationFragment" />
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.example.deliverynationclone.fragment.OrderHistoryFragment"
+        android:label="OrderHistoryFragment" />
+    <fragment
+        android:id="@+id/dibsOnFragment"
+        android:name="com.example.deliverynationclone.fragment.DibsOnFragment"
+        android:label="DibsOnFragment" />
+</navigation>
